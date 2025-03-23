@@ -1,0 +1,17 @@
+# Ignorar node_modules (dependências do projeto)
+node_modules/
+
+# Ignorar logs do npm
+npm-debug.log
+
+# Ignorar arquivos de ambiente (como .env)
+.env
+
+# Ignorar diretórios de build ou dist
+dist/
+build/
+
+# Ignorar arquivos de configuração local
+.DS_Store
+.vscode/
+.idea/

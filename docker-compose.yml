@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"  # Mapeia a porta 3000 do contêiner para a porta 3000 da máquina local
+    volumes:
+      - .:/app      # Faz com que o código no diretório atual seja montado em /app no contêiner
+    environment:
+      - NODE_ENV=production  # Variáveis de ambiente, se necessário
+    develop:
+      watch:
+        - path: .
+          action: restart
+    command: ["nodemon", "server.js"]  # Comando para rodar a aplicação, substitua com o comando certo
